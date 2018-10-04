@@ -12,5 +12,7 @@ RUN apk --no-cache add bash curl openjdk8-jre-base &&\
 
 ENV PATH=/kafka/bin:${PATH}
 
+EXPOSE 2181 2888 3888 9092
+
 COPY entry.sh /
 ENTRYPOINT ["/entry.sh"]
